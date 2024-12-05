@@ -1,0 +1,11 @@
+<div class="bg-slate-800 shadow-2xl p-3 h-screen" id="sidebar">
+  <h3 class="text-slate-200 font-bold text-4xl text-center pe-2">GifsApp</h3>
+  <hr class="mt-2">
+
+  <div class="mt-5 gap-2 space-y-2" *ngIf="_tagsHistory.length > 0">
+    <button class="bg-gray-200 shadow-lg px-5 py-3 flex mx-auto rounded-md hover:bg-gray-300 font-semibold"
+      *ngFor="let tag of _tagsHistory" (click)="searchGif(tag)">
+      {{ tag | titlecase }}
+    </button>
+  </div>
+</div>
